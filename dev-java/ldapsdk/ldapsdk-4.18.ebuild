@@ -14,8 +14,7 @@ KEYWORDS="amd64 x86"
 IUSE="doc"
 
 RDEPEND=">=virtual/jre-1.4
-	dev-java/jss:3.4
-	dev-java/jakarta-oro:2.0"
+	dev-java/jss:3.4"
 DEPEND=">=virtual/jdk-1.4
 	${RDEPEND}"
 
