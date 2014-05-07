@@ -40,7 +40,7 @@ COMMON_DEPEND="
 	sys-apps/tcp-wrappers[ipv6?]
 	www-apache/mod_nss
 	www-servers/apache:2[apache2_modules_actions,apache2_modules_alias,apache2_modules_auth_basic,apache2_modules_authz_default,apache2_modules_cgi,apache2_modules_mime_magic,apache2_modules_rewrite,apache2_modules_setenvif,suexec,threads]"
-RDEPEND="${COMMON_DEPEND} www-client/lynx"
+RDEPEND="${COMMON_DEPEND} www-client/lynx dev-perl/NetAddr-IP"
 DEPEND="sys-apps/sed ${COMMON_DEPEND}"
 
 S="${WORKDIR}/${PN}-${MY_PV}"

@@ -41,7 +41,8 @@ DEPEND="${ALL_DEPEND}
 	sys-apps/sed"
 RDEPEND="${ALL_DEPEND}
 	virtual/perl-Time-Local
-	virtual/perl-MIME-Base64"
+	virtual/perl-MIME-Base64
+	dev-perl/NetAddr-IP"
 
 S="${WORKDIR}/${MY_P}"
 
