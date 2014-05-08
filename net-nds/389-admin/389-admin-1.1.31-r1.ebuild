@@ -92,7 +92,7 @@ src_install () {
 	rm -rf "${D}"/etc/default
 
 	# install gentoo style init script.
-	newinitd "${FILESDIR}"/${PN}.initd ${PN}
+	newinitd "${FILESDIR}"/${PN}.initd-r1 ${PN}
 	newconfd "${FILESDIR}"/${PN}.confd ${PN}
 
 	# remove redhat style wrapper scripts
@@ -128,7 +128,7 @@ src_install () {
 		insinto /usr/share/selinux/${POLICY_TYPES}
 		doins -r "${S}/selinux/"*.pp
 	fi
-
+	echo "ServerName localhost" >> ${D}/etc/dirsrv/admin-serv/httpd.conf || die
 }
 
 pkg_postinst() {

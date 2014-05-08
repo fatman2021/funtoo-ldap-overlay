@@ -118,8 +118,8 @@ src_install () {
 	rm -rf "${D}"/etc/default || die
 
 	# and install gentoo style init script
-	newinitd "${FILESDIR}"/389-ds.initd 389-ds
-	newinitd "${FILESDIR}"/389-ds-snmp.initd 389-ds-snmp
+	newinitd "${FILESDIR}"/389-ds.initd-r1 389-ds
+	newinitd "${FILESDIR}"/389-ds-snmp.initd-r1 389-ds-snmp
 
 	# install Gentoo-specific start/stop scripts
 	rm -f "${D}"/usr/sbin/{re,}start-dirsrv || die "cannot remove 389 start/stop executables"
