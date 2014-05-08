@@ -23,6 +23,8 @@ checkconfig() {
 
 start() {
 	checkconfig || return 1
+	install -d /run/dirsrv -o dirsrv -g dirsrv
+	install -d /var/lock/dirsrv/slapd-${SERVER_ID} -o dirsrv -g dirsrv
 	rm -f $pidfile $altpidfile
 	ebegin "Starting 389 Directory Server, ID: ${SERVER_ID}"
 	start-stop-daemon --start --quiet --pidfile $pidfile \
